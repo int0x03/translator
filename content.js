@@ -6,12 +6,15 @@ function appendTranslatedText(text, originParagraph) {
 }
 
 function wrapParagraph(paragraph) {
-    const tIcon = document.createElement('span');
     const paragraphText = paragraph.textContent;
     if ("" == paragraphText.trim() || paragraphText.trim().split(" ").length < 2) {
         return;
     }
-
+    const lastChild = paragraph.lastElementChild;
+    if (lastChild && lastChild.nodeName === 'P' && lastChild.classList.contains('translator-p')) {
+        return;
+    }
+    const tIcon = document.createElement('span');
     tIcon.classList.add('translator-icon');
 
     tIcon.addEventListener('dblclick', () => {
