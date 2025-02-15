@@ -8,7 +8,7 @@ function appendTranslatedText(text, originParagraph) {
 function wrapParagraph(paragraph) {
     const tIcon = document.createElement('span');
     const paragraphText = paragraph.textContent;
-    if ("" == paragraphText.trim() || paragraphText.split(" ").length < 2) {
+    if ("" == paragraphText.trim() || paragraphText.trim().split(" ").length < 2) {
         return;
     }
 
