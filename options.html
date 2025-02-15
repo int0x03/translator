@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extension Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Extension Options</h1>
+        <h3>Prompt</h3>
+        <textarea id="prompt" placeholder="The prompt to ask LLM to translate"></textarea>
+        <hr>
+        <h3>LLM Configs</h3>
+        <p>find free LLM API from <a href='https://github.com/cheahjs/free-llm-api-resources' target="_blank">free-llm-api-resources</a>, ex: <a href='https://openrouter.ai/deepseek/deepseek-r1/api' target="_blank">https://openrouter.ai/deepseek/deepseek-r1/api</a></p>
+        <label for="api-url">API URL:</label>
+        <input type="text" id="api-url" placeholder="Enter API URL">
+        <label for="api-token">API Token:</label>
+        <input type="text" id="api-token" placeholder="Enter API Token">
+        <label for="model-name">Model Name:</label>
+        <input type="text" id="model-name" placeholder="Enter Model Name">
+        <button id="save-button">Save</button>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

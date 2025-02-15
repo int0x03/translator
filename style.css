@@ -1,0 +1,40 @@
+.translator-p {
+    margin: 0;
+}
+
+.translator-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.translator-icon::after {
+    content: 'T';
+    color: blue;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+.translator-icon-animate::after {
+    animation: colorChange 1s infinite;
+}
+
+.translator-icon-animate-rotate::after {
+    display: inline-block;
+    animation: rotate 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes colorChange {
+    25% { color: rgb(0, 255, 60); }
+    50% { color: red; }
+    100% { color: blue; }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
